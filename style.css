@@ -1,0 +1,208 @@
+*{
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-primary: #121214;
+  --bg-card-base-primary: #29292E;
+  --bg-card-primary: #0A3442;
+  --text-color-primary: #FFFFFF;
+  --btn-primary: #C4C4CC;
+  
+  --bg-secondary: #FFFFFF; 
+  --bg-card-base-secondary: #E1E1E6;
+  --bg-card-secondary: #02799D;
+  --text-color-secondary: #323238; 
+  --btn-secondary: #323238;
+  
+  font-size: 62.5%;
+}
+
+body{
+  background-color: var(--bg-primary);
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: var(--text-color-primary);
+  font-size: 12.7rem;
+  line-height: 14.8rem;
+  letter-spacing: 0rem;
+}
+
+body.dark-theme{
+  background-color: var(--bg-secondary);
+  color: var(--text-color-secondary);
+}
+
+.hide{
+  display: none;
+}
+
+header{
+  display: flex;
+  flex-direction:row-reverse;
+}
+
+header button{
+  background: transparent;
+  border: none;
+  margin-top: 6.4rem;
+  margin-right: 6.4rem; 
+
+  cursor: pointer;
+
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 82rem;
+  height: 33.5rem;
+
+  margin: auto;
+  margin-top: 19.6rem;
+  
+}
+
+svg path{
+  fill: var(--btn-primary);
+}
+
+body.dark-theme svg path{
+  fill: var(--btn-secondary);
+}
+
+
+#timer{
+  display: flex;
+
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+
+}
+
+#controls{
+  height: 4.8rem;
+  display: flex;
+  gap: 4rem;
+
+}
+
+section button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+aside{
+  display: grid;
+  grid-template-columns: 14rem 14rem;
+  gap: 3.2rem;
+
+}
+
+
+button.selected{
+  background: var(--bg-card-primary);
+}
+
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 13.8rem;
+  height: 15.2rem;
+  
+  background: var(--bg-card-base-primary);
+  border-radius: 2.4rem;
+  
+  cursor: pointer;
+  border: none;
+}
+
+#forest{
+  position: absolute;
+}
+#forest-slider{
+  position: relative;
+  margin: 11.2rem 2.4rem 0;
+}
+#rain{
+  position: absolute;
+}
+#rain-slider{
+  position: relative;
+  margin: 11.2rem 2.4rem 0;
+}
+#coffee{
+  position: absolute;
+}
+#coffee-slider{
+  position: relative;
+  margin: 11.2rem 2.4rem 0;
+}
+#firecamp{
+  position: absolute;
+}
+#firecamp-slider{
+  position: relative;
+  margin: 11.2rem 2.4rem 0;
+}
+
+body.dark-theme aside .cards{
+  background: var(--bg-card-base-secondary);
+}
+
+body.dark-theme aside button.selected{
+  background: var(--bg-card-secondary);
+}
+.cards svg{
+  width: 4.4rem;
+  height: 5.6rem;
+  margin: 2.4rem 4.7rem 3.8rem;
+}
+
+.slider{
+  height: 0.4rem;
+  background: var(--btn-primary);
+  border-radius: 5px;
+  width: 9rem;
+  -webkit-appearance: none;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+body.dark-theme aside .slider{
+  background: var(--btn-secondary);
+}
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%; 
+
+  background: var(--btn-primary);
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+}
+
+body.dark-theme aside .slider::-webkit-slider-thumb{
+  background: var(--btn-secondary);
+}
+
